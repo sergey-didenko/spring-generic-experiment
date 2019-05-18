@@ -74,6 +74,9 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	testImplementation('org.springframework.security:spring-security-test')
 	testCompile "junit:junit"
+
+	// https://mvnrepository.com/artifact/io.github.jhipster/jhipster-framework
+	compile group: 'io.github.jhipster', name: 'jhipster-framework', version: '3.0.1'
 }
 
 wrapper {
