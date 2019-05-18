@@ -4,7 +4,7 @@ import com.sergey.didenko.spring.generic.criteria.model.EconomicAgentCriteria;
 import com.sergey.didenko.spring.generic.criteria.predicate.DoubleJoinPredicate;
 import com.sergey.didenko.spring.generic.criteria.predicate.JoinPredicate;
 import com.sergey.didenko.spring.generic.domain.*;
-import com.sergey.didenko.spring.generic.service.criteria.abstr.QueryServiceAbstr;
+import com.sergey.didenko.spring.generic.criteria.service.abstr.QueryServiceAbstr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;

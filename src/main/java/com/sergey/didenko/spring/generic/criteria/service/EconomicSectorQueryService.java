@@ -3,7 +3,7 @@ package com.sergey.didenko.spring.generic.criteria.service;
 import com.sergey.didenko.spring.generic.criteria.model.EconomicSectorCriteria;
 import com.sergey.didenko.spring.generic.criteria.predicate.JoinPredicate;
 import com.sergey.didenko.spring.generic.domain.*;
-import com.sergey.didenko.spring.generic.service.criteria.abstr.QueryServiceAbstr;
+import com.sergey.didenko.spring.generic.criteria.service.abstr.QueryServiceAbstr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;

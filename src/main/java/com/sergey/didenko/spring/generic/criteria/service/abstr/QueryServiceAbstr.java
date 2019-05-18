@@ -1,4 +1,4 @@
-package com.sergey.didenko.spring.generic.service.criteria.abstr;
+package com.sergey.didenko.spring.generic.criteria.service.abstr;
 
 import io.github.jhipster.service.QueryService;
 import org.springframework.data.jpa.domain.Specification;

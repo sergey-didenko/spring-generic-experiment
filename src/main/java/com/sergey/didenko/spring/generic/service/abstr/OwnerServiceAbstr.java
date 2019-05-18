@@ -5,7 +5,7 @@ import com.sergey.didenko.spring.generic.domain.abstr.EntityAbstr;
 import com.sergey.didenko.spring.generic.domain.abstr.EntityWithOwnerAbstr;
 import com.sergey.didenko.spring.generic.repository.abstr.EntityRepositoryInterface;
 import com.sergey.didenko.spring.generic.repository.abstr.EntityWithOwnerRepositoryInterface;
-import com.sergey.didenko.spring.generic.service.criteria.abstr.QueryServiceAbstr;
+import com.sergey.didenko.spring.generic.criteria.service.abstr.QueryServiceAbstr;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;

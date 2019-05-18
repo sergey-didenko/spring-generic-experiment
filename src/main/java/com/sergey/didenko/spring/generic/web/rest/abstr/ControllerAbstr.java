@@ -3,7 +3,7 @@ package com.sergey.didenko.spring.generic.web.rest.abstr;
 import com.sergey.didenko.spring.generic.domain.abstr.EntityAbstr;
 import com.sergey.didenko.spring.generic.repository.abstr.EntityRepositoryInterface;
 import com.sergey.didenko.spring.generic.service.abstr.ServiceAbstr;
-import com.sergey.didenko.spring.generic.service.criteria.abstr.QueryServiceAbstr;
+import com.sergey.didenko.spring.generic.criteria.service.abstr.QueryServiceAbstr;
 import com.sergey.didenko.spring.generic.web.rest.util.PaginationUtil;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
