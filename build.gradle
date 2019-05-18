@@ -29,14 +29,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 buildDir = 'build'
-allprojects {
-	idea {
-		module {
-			outputDir file("$buildDir/classes/main")
-			testOutputDir file("$buildDir/classes/test")
-		}
-	}
-}
+project.buildDir = "$buildDir"
 
 repositories {
 	mavenCentral()
@@ -60,7 +53,10 @@ dependencies {
 	//implementation('org.springframework.session:spring-session-core')
 	//implementation('org.springframework.boot:spring-boot-starter-mail')
 	//implementation('org.springframework.boot:spring-boot-starter-quartz')
-	
+
+	//[DB] JPA 2 generator
+	annotationProcessor "org.hibernate:hibernate-jpamodelgen"
+
 	//[DB] migration utils
 	implementation('org.liquibase:liquibase-core')
 
