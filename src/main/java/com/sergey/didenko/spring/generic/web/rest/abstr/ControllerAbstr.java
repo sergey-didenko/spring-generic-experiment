@@ -15,6 +15,31 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * TODO : Methods:
+ *
+ * @GetMapping("/findAllByCriteriaAndPageable")
+ * ResponseEntity<List<E>> findAllByCriteriaAndPageable(C criteria, Pageable pageable);
+ *
+ * @GetMapping("/getListByCriteria")
+ * ResponseEntity<List<E>> getListByCriteria(C criteria);
+ *
+ * @GetMapping
+ * ResponseEntity<E> get(@RequestParam("id") Long id);
+ *
+ * @PutMapping
+ * ResponseEntity<E> create(@RequestBody E_DTO body);
+ *
+ * @PostMapping
+ * ResponseEntity<E> update(@RequestBody E_DTO body);
+ *
+ * @DeleteMapping
+ * void remove(@RequestParam(value = "id") Long id);
+ *
+ * E toDTO(E element);
+ * List<E> toDTO(List<E> elementList);
+ * List<E> toDTO(Page<E> elementPage);
+ */
 public abstract class ControllerAbstr<E extends EntityAbstr,
                                       E_DTO extends E,
                                       R extends EntityRepositoryInterface,

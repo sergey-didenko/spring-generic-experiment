@@ -6,13 +6,23 @@ import com.sergey.didenko.spring.generic.domain.EconomicSector;
 import com.sergey.didenko.spring.generic.repository.EconomicSectorRepository;
 import com.sergey.didenko.spring.generic.service.abstr.ServiceAbstr;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
+/**
+ * TODO : Inherited methods From ServiceAbstr.java:
+ *
+ * E toDTO(E element);
+ * E toEntity(E_DTO dto);
+ *
+ * Page<E> findAllByCriteriaAndPageable(C criteria, Pageable page);
+ * List<E> getListByCriteria(C criteria);
+ * E get(Long id);
+ * E create(E element);
+ * E update(E element);
+ * void delete(Long id);
+ * void delete(E element);
+ */
 @Service
 @Transactional
 public class EconomicSectorService extends ServiceAbstr<EconomicSector,
@@ -27,41 +37,4 @@ public class EconomicSectorService extends ServiceAbstr<EconomicSector,
         super(repository, economicSectorQueryService);
     }
 
-    //TODO : for example only
-
-    @Override
-    public Page<EconomicSector> findAllByCriteriaAndPageable(EconomicSectorCriteria criteria, Pageable page) {
-        return super.findAllByCriteriaAndPageable(criteria, page);
-    }
-
-    @Override
-    public List<EconomicSector> getListByCriteria(EconomicSectorCriteria criteria) {
-        return super.getListByCriteria(criteria);
-    }
-
-    @Override
-    public EconomicSector get(Long id) {
-        return super.get(id);
-    }
-
-    @Override
-    public EconomicSector create(EconomicSector element) {
-        return super.create(element);
-    }
-
-    @Override
-    public EconomicSector update(EconomicSector element) {
-        return super.update(element);
-    }
-
-    @Override
-    public void delete(Long id) {
-        super.delete(id);
-    }
-
-    @Override
-    public void delete(EconomicSector element) {
-        //TODO : delete parents
-        super.delete(element);
-    }
 }

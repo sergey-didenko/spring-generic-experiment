@@ -10,14 +10,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-@Transactional(readOnly = true)
+@Transactional
 public class EconomicSectorQueryService extends QueryServiceAbstr<EconomicSector, EconomicSectorCriteria> {
 
     @Autowired
     public EconomicSectorQueryService() {}
 
     @Override
-    @Transactional(readOnly = true)
+    @Transactional
     public Specification<EconomicSector> createSpecificationByCriteria(EconomicSectorCriteria criteria) {
         Specification<EconomicSector> specification = null;
         boolean wherePresent = false;

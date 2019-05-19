@@ -2,20 +2,46 @@ package com.sergey.didenko.spring.generic.service;
 
 import com.sergey.didenko.spring.generic.criteria.model.EconomicAgentCriteria;
 import com.sergey.didenko.spring.generic.criteria.service.EconomicAgentQueryService;
-import com.sergey.didenko.spring.generic.domain.*;
+import com.sergey.didenko.spring.generic.domain.EconomicAgent;
+import com.sergey.didenko.spring.generic.domain.EconomicSector;
 import com.sergey.didenko.spring.generic.domain.dto.EconomicAgentDTO;
 import com.sergey.didenko.spring.generic.repository.EconomicAgentRepository;
 import com.sergey.didenko.spring.generic.repository.EconomicSectorRepository;
 import com.sergey.didenko.spring.generic.service.abstr.OwnerServiceAbstr;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.metamodel.SingularAttribute;
-import java.util.List;
 
+/**
+ * TODO : Inherited methods From ServiceAbstr.java:
+ *
+ * E toDTO(E element);
+ * E toEntity(E_DTO dto);
+ *
+ * Page<E> findAllByCriteriaAndPageable(C criteria, Pageable page);
+ * List<E> getListByCriteria(C criteria);
+ * E get(Long id);
+ * E create(E element);
+ * E update(E element);
+ * void delete(Long id);
+ * void delete(E element);
+ *
+ * TODO : Inherited methods From OwnerServiceAbstr.java:
+ *
+ * O_E createOwnerDTO(O_E owner);
+ * SingularAttribute<E, O_E> getOwnerJoin1();
+ * SingularAttribute<O_E, Long> getOwnerJoin2();
+ *
+ * Page<E> findAllByOwnerAndCriteriaAndPageable(O_E owner, C criteria, Pageable page);
+ * Page<E> findAllByOwnerAndCriteriaAndPageable(Long ownerId, C criteria, Pageable page);
+ * List<E> getListByOwnerAndCriteria(O_E owner, C criteria);
+ * List<E> getListByOwnerAndCriteria(Long ownerId, C criteria);
+ * List<E> getListByOwner(Long ownerId);
+ * List<E> getListByOwner(O_E owner);
+ * O_E getOwner(E element);
+ */
 @Service
 @Transactional
 public class EconomicAgentService extends OwnerServiceAbstr<EconomicAgent,
@@ -84,76 +110,4 @@ public class EconomicAgentService extends OwnerServiceAbstr<EconomicAgent,
 
     //==============[DTO section]
 
-    //TODO : for example only
-
-    @Override
-    public Page<EconomicAgent> findAllByOwnerAndCriteriaAndPageable(EconomicSector owner, EconomicAgentCriteria criteria, Pageable page) {
-        return super.findAllByOwnerAndCriteriaAndPageable(owner.getId(), criteria, page);
-    }
-
-    @Override
-    public Page<EconomicAgent> findAllByOwnerAndCriteriaAndPageable(Long ownerId, EconomicAgentCriteria criteria, Pageable page) {
-        return super.findAllByOwnerAndCriteriaAndPageable(ownerId, criteria, page);
-    }
-
-    @Override
-    public List<EconomicAgent> getListByOwnerAndCriteria(EconomicSector owner, EconomicAgentCriteria criteria) {
-        return super.getListByOwnerAndCriteria(owner.getId(), criteria);
-    }
-
-    @Override
-    public List<EconomicAgent> getListByOwnerAndCriteria(Long ownerId, EconomicAgentCriteria criteria) {
-        return super.getListByOwnerAndCriteria(ownerId, criteria);
-    }
-
-    @Override
-    public List<EconomicAgent> getListByOwner(EconomicSector owner) {
-        return getListByOwner(owner.getId());
-    }
-
-    @Override
-    public List<EconomicAgent> getListByOwner(Long id) {
-        return super.getListByOwner(id);
-    }
-
-    @Override
-    public EconomicSector getOwner(EconomicAgent element) {
-        return super.getOwner(element);
-    }
-
-    @Override
-    public Page<EconomicAgent> findAllByCriteriaAndPageable(EconomicAgentCriteria criteria, Pageable page) {
-        return super.findAllByCriteriaAndPageable(criteria, page);
-    }
-
-    @Override
-    public List<EconomicAgent> getListByCriteria(EconomicAgentCriteria criteria) {
-        return super.getListByCriteria(criteria);
-    }
-
-    @Override
-    public EconomicAgent get(Long id) {
-        return super.get(id);
-    }
-
-    @Override
-    public EconomicAgent create(EconomicAgent element) {
-        return super.create(element);
-    }
-
-    @Override
-    public EconomicAgent update(EconomicAgent element) {
-        return super.update(element);
-    }
-
-    @Override
-    public void delete(Long id) {
-        super.delete(id);
-    }
-
-    @Override
-    public void delete(EconomicAgent element) {
-        //TODO : delete parents
-        super.delete(element);
-    }
 }

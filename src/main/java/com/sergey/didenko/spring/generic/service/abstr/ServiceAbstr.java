@@ -10,7 +10,21 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
-@Transactional(readOnly = true)
+/**
+ * TODO : Methods:
+ *
+ * E toDTO(E element);
+ * E toEntity(E_DTO dto);
+ *
+ * Page<E> findAllByCriteriaAndPageable(C criteria, Pageable page);
+ * List<E> getListByCriteria(C criteria);
+ * E get(Long id);
+ * E create(E element);
+ * E update(E element);
+ * void delete(Long id);
+ * void delete(E element);
+ */
+@Transactional
 public abstract class ServiceAbstr<E extends EntityAbstr,
                                    E_DTO extends E,
                                    R extends EntityRepositoryInterface,

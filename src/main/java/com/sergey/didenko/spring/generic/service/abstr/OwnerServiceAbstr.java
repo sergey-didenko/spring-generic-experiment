@@ -15,7 +15,35 @@ import javax.persistence.metamodel.SingularAttribute;
 import java.util.List;
 import java.util.Optional;
 
-@Transactional(readOnly = true)
+/**
+ * TODO : Inherited methods From ServiceAbstr.java:
+ *
+ * E toDTO(E element);
+ * E toEntity(E_DTO dto);
+ *
+ * Page<E> findAllByCriteriaAndPageable(C criteria, Pageable page);
+ * List<E> getListByCriteria(C criteria);
+ * E get(Long id);
+ * E create(E element);
+ * E update(E element);
+ * void delete(Long id);
+ * void delete(E element);
+ *
+ * TODO : Methods:
+ *
+ * O_E createOwnerDTO(O_E owner);
+ * SingularAttribute<E, O_E> getOwnerJoin1();
+ * SingularAttribute<O_E, Long> getOwnerJoin2();
+ *
+ * Page<E> findAllByOwnerAndCriteriaAndPageable(O_E owner, C criteria, Pageable page);
+ * Page<E> findAllByOwnerAndCriteriaAndPageable(Long ownerId, C criteria, Pageable page);
+ * List<E> getListByOwnerAndCriteria(O_E owner, C criteria);
+ * List<E> getListByOwnerAndCriteria(Long ownerId, C criteria);
+ * List<E> getListByOwner(Long ownerId);
+ * List<E> getListByOwner(O_E owner);
+ * O_E getOwner(E element);
+ */
+@Transactional
 public abstract class OwnerServiceAbstr<E extends EntityWithOwnerAbstr<O_E, O_R>,
                                         E_DTO extends E,
                                         R extends EntityWithOwnerRepositoryInterface,
